@@ -27,7 +27,7 @@
             <div class="col-10 mx-auto col-md-6 text-center main-container p-5">
                 <h1 class="text-uppercase">counter</h1>
                 <!-- 1. Evaluamos la variable 'counter'-->
-                <h1 :class="updateColor()" id="counter">{{counter}}</h1>
+                <h1 :class="updateColor" id="counter">{{counter}}</h1>
                 <div class="btn-container d-flex justify-content-around flex-wrap">
                     <button @click="updateCounter(-1)" class="btn counterBtn prevBtn text-uppercase m-2">lower
                         count</button>

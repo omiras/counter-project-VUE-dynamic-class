@@ -3,6 +3,7 @@
 import {
   createApp,
   ref,
+  computed,
 } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 
 createApp({
@@ -15,11 +16,11 @@ createApp({
       counter.value = counter.value + x;
     };
 
-    const updateColor = () => {
+    const updateColor = computed(() => {
       if (counter.value > 0) {
         return "text-success";
       } else if (counter.value < 0) return "text-danger";
-    };
+    });
 
     return {
       counter,
