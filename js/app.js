@@ -1,19 +1,15 @@
 // Tu código aquí.
 
-Vue.createApp({
-    data() {
-        return {
-            count: 0
-        }
-    },
+import {
+  createApp,
+  ref,
+} from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 
-    methods: {
-        addCount() {
-            this.count++
-        },
-        lowerCount() {
-            this.count--
-        }
-
-    }
-}).mount('#app')
+createApp({
+  setup() {
+    const message = ref("Hello Vue!");
+    return {
+      message,
+    };
+  },
+}).mount("#app");
